@@ -78,6 +78,8 @@ Testing in production environment:
 npm run build
 # 发包 
 npm publish
+# 删除发错包
+npm unpublish inject-webpack-plugin-head@0.0.5 --force 
 ```
 
 </details>
