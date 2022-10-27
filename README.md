@@ -10,7 +10,6 @@ npm install --save-dev inject-webpack-plugin-head
 yarn add --dev inject-webpack-plugin-head
 ```
 
-
 ## Example
 
 #### Input
@@ -39,10 +38,7 @@ index.html
 <html><head><main id=root>Hi!</main></head></html>
 ```
 
-
 ## Options
-
-
 
 <table>
 <tr>
@@ -65,13 +61,10 @@ index.html
 </tr>
 </table>
 
-
 ## Development
 
 <details>
 <summary><b>Development hints for maintaining and improving inject-webpack-plugin-head</b></summary>
-
-
 
 Setting up:
 ```bash
@@ -81,7 +74,10 @@ npm install
 ```
 Testing in production environment:
 ```bash
-npm run test
+# 打包
+npm run build
+# 发包 
+npm publish
 ```
 
 </details>
