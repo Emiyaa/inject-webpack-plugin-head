@@ -1,0 +1,71 @@
+{
+  "name": "inject-webpack-plugin-head",
+  "version": "0.0.1",
+  "description": "Webpack plugin that injects a custom string into the head of the html-webpack-plugin output.",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "insert-string-after": "^1.0.0",
+    "insert-string-before": "^1.0.0",
+    "rollup-plugin-typescript2": "^0.34.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/jest": "^27.4.1",
+    "@types/jest-image-snapshot": "^4",
+    "@types/prettier": "^2",
+    "@types/testing-library__jest-dom": "^5",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "debug": "^4.3.3",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.6.6",
+    "jest": "^27.5.1",
+    "jest-image-snapshot": "^4.5.1",
+    "jest-playwright-preset": "^1.7.0",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "rollup": "^2.67.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "babel": "rimraf dist/ babel --out-dir dist --source-maps true src",
+    "config": "rollup --config ",
+    "test": "npm run build MAIN=dist/package jest --runInBand --detectOpenHandles",
+    "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
+    "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
+    "serve": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Emiyaa/inject-webpack-plugin-head"
+  },
+  "keywords": [],
+  "author": "Emiyaa <960062036@qq.com> (https://github.com/Emiyaa)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emiyaa/inject-webpack-plugin-head/issues"
+  },
+  "homepage": "https://github.com/Emiyaa/inject-webpack-plugin-head#README"
+}
