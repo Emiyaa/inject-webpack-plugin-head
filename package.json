@@ -1,6 +1,6 @@
 {
   "name": "inject-webpack-plugin-head",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Webpack plugin that injects a custom string into the head of the html-webpack-plugin output.",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
